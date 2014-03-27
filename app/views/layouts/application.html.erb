@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Recycle</title>
+  <title>PLUSfoam Recycling</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
+    
+    <%= render 'layouts/header' %>
 
-<%= yield %>
-
-</body>
+    <div class="container">
+        <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class: "alert alert-info") %>
+        <% end %>
+      <%= yield %>
+    </div>
+    <div class="container">
+      <footer class="pull-right">
+        <p>Made in MIA © Listo Labs 2014</p>
+      </footer>
+    </div>
+  </body>
 </html>
