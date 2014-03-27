@@ -28,6 +28,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'devise'
 
+gem 'font-awesome-sass'
+
 group :development, :test do
      gem 'sqlite3'
 end
