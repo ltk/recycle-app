@@ -1,6 +1,6 @@
 == PLUS Reclaim Widget
 
-#Users will be able to:
+Users will be able to:
 
 1. Sign-up for an account
 2. Select their brand
