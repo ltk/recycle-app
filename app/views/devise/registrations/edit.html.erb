@@ -11,21 +11,21 @@
         
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, class: "form-control", :autofocus => true %>
+          <%= f.email_field :email, class: "default-input", :autofocus => true %>
         </div>
 
         <div class="form-group">
           <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-          <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
+          <%= f.password_field :password, class: "default-input", :autocomplete => "off" %>
         </div>
 
         <div class="form-group">
           <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-          <%= f.password_field :current_password, class: "form-control" %>
+          <%= f.password_field :current_password, class: "default-input" %>
         </div>
 
         <div class="form-group">
-          <%= f.submit "Update", class: "btn btn-primary" %>
+          <%= f.submit "Update", class: "btn btn-primary btn-block" %>
         </div>
       <% end %>
     </div>

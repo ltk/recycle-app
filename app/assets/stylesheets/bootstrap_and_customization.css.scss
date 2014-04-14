@@ -16,4 +16,26 @@ $jumbotron-bg:                                         white;
 
 .navbar-brand { font-weight: bold; }
 
-footer p { font-size: 12px; }
+footer p { font-size: 14px; }
+
+p {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* FORUM UPDATES */
+
+.default-input {
+  padding:0.8em;
+  border:2px solid #ccc;
+  font-size:1em;
+  width:100%;
+  color:#999;
+  margin-bottom:15px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.default-input:focus {
+  border:2px solid #999;
+}

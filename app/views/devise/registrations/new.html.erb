@@ -10,16 +10,16 @@
 
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          <%= f.email_field :email, autofocus: true, class: "default-input" %>
         </div>
 
         <div class="form-group">
           <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control" %>
+          <%= f.password_field :password, class: "default-input" %>
         </div>
 
         <div class="form-group">
-          <%= f.submit "Sign up", class: "btn btn-primary" %>
+          <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
         </div>
       <% end %>
     </div>
