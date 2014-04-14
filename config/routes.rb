@@ -1,9 +1,15 @@
 Recycle::Application.routes.draw do
-  resources :brands
-
-  devise_for :users
   root "pages#home"
 
-  get "about" => "pages#about"
+  devise_for :users
+  devise_for :admins
   
+  resources :brands
+  resources :products
+  get "/products/:id/submit" => "products#submit"  
+  resources :submissions, only: [:show]  
+
+  get "reclaim" => "pages#reclaim"
+  get "about" => "pages#about"
+
 end
