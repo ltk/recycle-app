@@ -14,6 +14,7 @@
     <% @brands.each do |brand| %>
       <tr>
         <td><%= brand.description %></td>
+        <td><%= brand.image %></td>
         <td><%= link_to 'Show', brand %></td>
         <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
         <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
