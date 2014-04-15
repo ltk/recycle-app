@@ -7,9 +7,10 @@ Recycle::Application.routes.draw do
   resources :brands
   resources :products
   get "/products/:id/submit" => "products#submit"  
-  resources :submissions, only: [:show]  
+  resources :submissions 
 
   get "reclaim" => "pages#reclaim"
   get "about" => "pages#about"
+  get "submissions" => "submissions#index"
 
 end
