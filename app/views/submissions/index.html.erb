@@ -24,9 +24,9 @@
         <td><%= submission.product.name %></td>
         <td><%= submission.brand.description %></td>
         <td><img src="<%= submission.product.image %>" width="100px"></td>
-        <td><%= link_to 'Show', submission, :class => "btn btn-primary" %></td>
+        <td><%= link_to 'View', submission, :class => "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission), :class => "btn btn-warning" %></td>
-        <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+        <td><%= link_to 'Delete', submission, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
