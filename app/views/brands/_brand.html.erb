@@ -1,5 +1,5 @@
 <!-- <%= link_to brand.id, brand_path(brand) %> -->
 
-  <a href="/brands/<%= brand.id %>"><img src="<%= brand.image %>"></a>
+  <a href="/brands/<%= brand.id %>"><%= image_tag brand.image.url, class: "brand-image" %></a>
 
   <!--<%= link_to image_tag(brand.image), :controller => "brands", :id => 2 %> -->

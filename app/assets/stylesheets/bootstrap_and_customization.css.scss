@@ -22,6 +22,13 @@ p {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* NAV BAR */
+
+nav.navbar.navbar-default {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
 /* FORUM UPDATES */
 
 .default-input {
@@ -38,4 +45,40 @@ p {
 
 .default-input:focus {
   border:2px solid #999;
+}
+
+/* HOME PAGE */
+
+.splash {
+  height: 35em;
+  padding-top: 9em;
+  margin-bottom: 2em;
+  background-image: url("http://i.imgur.com/lXG1upT.jpg?1");
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.splash h1 {
+  font-size: 3.5em;
+}
+
+.splash p {
+  font-size: 1.5em;
+}
+
+/* BRAND PAGE */
+
+.brand-image {
+  display: block;
+  float: left;
+  width: 204px;
+  height: 125px;
+  list-style: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-indent: -10000px;
+  cursor: pointer;
 }

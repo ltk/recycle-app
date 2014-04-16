@@ -5,9 +5,12 @@ Recycle::Application.routes.draw do
   devise_for :admins
   
   resources :brands
+
   resources :products
   get "/products/:id/submit" => "products#submit"  
-  resources :submissions 
+
+  resources :submissions
+  post "/submissions/:id/change_status" => "submissions#change_status", as: 'change_status_submission'
 
   get "reclaim" => "pages#reclaim"
   get "about" => "pages#about"

@@ -3,7 +3,7 @@
 
     <div class="panel-body">
 
-<%= form_for(@brand) do |f| %>
+<%= form_for @brand, html: { multipart: true } do |f| %>
   <% if @brand.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@brand.errors.count, "error") %> prohibited this brand from being saved:</h2>
@@ -15,19 +15,22 @@
       </ul>
     </div>
   <% end %>
-<form role="form">
-  <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, class: "default-input" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :image %><br>
-    <%= f.text_field :image, class: "default-input" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  </div>
+  <form role="form">
+
+    <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_field :description, class: "default-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    </div>
   </form>
-  </div>
+</div>
 <% end %>
 <br>

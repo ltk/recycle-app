@@ -4,29 +4,43 @@
   <thead>
     <tr>
       <th>Submission Time</th>
-      <th>STATUS</th>
+      <th>Status</th>
       <th>Name</th>
       <th>Email</th>
       <th>Product</th>
       <th>Brand</th>
       <th></th>
-      <th></th>
+      <th>Update</th>
     </tr>
   </thead>
 
   <tbody>
     <% @submission.each do |submission| %>
       <tr>
-        <td><%= submission.created_at %></td>
-        <td><button class="btn btn-xs btn-danger">PENDING</button></td>
-        <td><%= submission.user.first_name %> <%= submission.user.last_name %></td>
-        <td><%= submission.user.email %></td>
-        <td><%= submission.product.name %></td>
-        <td><%= submission.brand.description %></td>
-        <td><%= image_tag submission.product.image, width: "100px" %></td>
-        <td><%= link_to 'View', submission, :class => "btn btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_submission_path(submission), :class => "btn btn-warning" %></td>
-        <td><%= link_to 'Delete', submission, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+        <td style="vertical-align:middle;"><%= submission.created_at %></td>
+        <% case submission.status %>
+          <% when Submission::STATUS_PENDING %>
+            <td style="vertical-align:middle;"><button class="btn btn-xs btn-danger"><%= submission.status_string %></button></td>
+          <% when Submission::STATUS_RECEIVED %>
+            <td style="vertical-align:middle;"><button class="btn btn-xs btn-warning"><%= submission.status_string %></button></td>
+          <% when Submission::STATUS_PROCESSED %>
+            <td style="vertical-align:middle;"><button class="btn btn-xs btn-success"><%= submission.status_string %></button></td>
+        <% end %>
+        <td style="vertical-align:middle;"><%= submission.user.first_name %> <%= submission.user.last_name %></td>
+        <td style="vertical-align:middle;"><%= submission.user.email %></td>
+        <td style="vertical-align:middle;"><%= submission.product.name %></td>
+        <td style="vertical-align:middle;"><%= submission.brand.description %></td>
+        <td style="vertical-align:middle;"><%= image_tag submission.product.image, width: "100px" %></td>
+        <% if submission.status == Submission::STATUS_PENDING %>
+          <td style="vertical-align:middle;"><%= link_to 'Received', change_status_submission_path(submission), class: "btn btn-warning", method: :post %></td>
+        <% else %>
+          <% if submission.status == Submission::STATUS_RECEIVED %>
+            <td style="vertical-align:middle;"><%= link_to 'Processed', change_status_submission_path(submission), class: "btn btn-success", method: :post %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        <% end %>
+        <td style="vertical-align:middle;"><%= link_to 'Delete', submission, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

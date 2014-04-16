@@ -27,6 +27,17 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
   end
 
+  def change_status
+    submission = Submission.find(params[:id])
+    if submission.status == Submission::STATUS_PENDING
+      submission.update_attribute(:status, Submission::STATUS_RECEIVED) 
+    else
+      submission.update_attribute(:status, Submission::STATUS_PROCESSED)
+    end
+
+    redirect_to submissions_path
+  end
+
   def destroy
     @submission = Submission.find(params[:id])
     @submission.destroy

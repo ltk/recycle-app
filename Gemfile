@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
 gem 'cancan'
 gem 'font-awesome-sass'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 group :development, :test do
      gem 'sqlite3'
