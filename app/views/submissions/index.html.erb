@@ -4,10 +4,10 @@
   <thead>
     <tr>
       <th>Submission Time</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>User Email</th>
-      <th>Product Name</th>
+      <th>STATUS</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Product</th>
       <th>Brand</th>
       <th></th>
       <th></th>
@@ -18,12 +18,12 @@
     <% @submission.each do |submission| %>
       <tr>
         <td><%= submission.created_at %></td>
-        <td><%= submission.user.first_name %></td>
-        <td><%= submission.user.last_name %></td>
+        <td><button class="btn btn-xs btn-danger">PENDING</button></td>
+        <td><%= submission.user.first_name %> <%= submission.user.last_name %></td>
         <td><%= submission.user.email %></td>
         <td><%= submission.product.name %></td>
         <td><%= submission.brand.description %></td>
-        <td><img src="<%= submission.product.image %>" width="100px"></td>
+        <td><%= image_tag submission.product.image, width: "100px" %></td>
         <td><%= link_to 'View', submission, :class => "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission), :class => "btn btn-warning" %></td>
         <td><%= link_to 'Delete', submission, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
