@@ -1,23 +1,27 @@
-<h1>Listing brands</h1>
-
-<table>
+<br>
+<h1>Manage brands</h1>
+<%= link_to '+ Add New Brand', new_brand_path, class: "btn btn-success pull-right" %>
+<br>
+<br>
+<br>
+<table class="table text-center">
   <thead>
     <tr>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th class="text-center">Brand Name</th>
+      <th class="text-center">Preview Image</th>
+      <th class="text-center">Update</th>
+      <th class="text-center">Delete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @brands.each do |brand| %>
       <tr>
-        <td><%= brand.description %></td>
-        <td><%= brand.image %></td>
-        <td><%= link_to 'Show', brand %></td>
-        <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-        <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="vertical-align:middle;"><%= brand.description %></td>
+        <td style="vertical-align:middle;"><%= image_tag brand.image(:thumb) %></td>
+        <!-- <td><%= link_to 'Show', brand %></td> -->
+        <td style="vertical-align:middle;"><%= link_to 'Edit', edit_brand_path(brand), class: "btn btn-warning"  %></td>
+        <td style="vertical-align:middle;"><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Brand', new_brand_path %>
+

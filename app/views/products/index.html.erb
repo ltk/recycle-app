@@ -1,29 +1,30 @@
-<h1>Listing products</h1>
+<h1>Manage products</h1>
 
-<table>
+<%= link_to '+ Add New Product', new_product_path, class: "btn btn-success pull-right" %>
+<br>
+<br>
+<table class="table text-center">
   <thead>
     <tr>
-      <th>Product Name</th>
-      <th>Brand Id</th>
-      <th>Image Link</th>
-      <th></th>
+      <th class="text-center">Product Name</th>
+      <th class="text-center">Brand Id</th>
+      <th class="text-center">Image Link</th>
+      <th class="text-center">Edit Product</th>
+      <th class="text-center">Delete Product</th>
     </tr>
   </thead>
 
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.brand_id %></td>
-        <td><%= product.image %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="vertical-align:middle;"><%= product.name %></td>
+        <td style="vertical-align:middle;"><%= product.brand_id %></td>
+        <td style="vertical-align:middle;"><%= image_tag product.image, width: "100px" %></td>
+        <td style="vertical-align:middle;"><%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %></td>
+        <td style="vertical-align:middle;"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>
