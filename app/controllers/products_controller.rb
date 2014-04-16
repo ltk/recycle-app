@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
-  
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
   end
 
   def show
-    @product = Product.find(params[:id])
+    # @product = Product.find(params[:id])
   end
 
   def new
@@ -15,18 +16,12 @@ class ProductsController < ApplicationController
   def edit
   end
 
-  def submit
-    product = Product.find(params[:id])
-    submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id)
-    redirect_to submission_path(submission)
-  end
-
   def create
     @product = Product.new(product_params)
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to products_path, notice: 'Product was successfully created.' }
         format.json { render action: 'show', status: :created, location: @product }
       else
         format.html { render action: 'new' }
@@ -38,7 +33,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to products_path, notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

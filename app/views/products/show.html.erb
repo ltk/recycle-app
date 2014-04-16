@@ -6,20 +6,36 @@
   <li><a href="/brands/<%= @product.brand.id %>">Products</a></li>
   <li class="active">Review & Submit</li>
 </ol>
+  
+<h3 class="text-center">Hey...Please Review Your Reclaim</h3>
 
-<br>
-
-<div class="row">
+<!-- <div class="row">
   <div class="container col-md-push-3 col-md-6 text-center">
     <h3>Hey...Please Review Your Reclaim</h3>
-      <p><strong>Your E-mail:</strong> <%= current_user.email %></p>
-      <p><strong>Your Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
-      <p><strong>Brand:</strong><%= @product.brand.description %></p>
+      <p><strong>Your E-mail: </strong><%= current_user.email %></p>
+      <p><strong>Your Name: </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
+      <p><strong>Brand: </strong><%= @product.brand.description %></p>
       <%= image_tag @product.image %><br>
       <br>
       <%= link_to 'Submit recycling', "/products/#{@product.id}/submit", class: "btn btn-warning btn-block" %>
   </div>
-
+ -->
 
 </div>
+<br>
 
+<div class="row">
+  <div class="col-sm-6 col-md-push-3 col-md-6 text-center">
+    <div class="thumbnail">
+      <%= image_tag @product.image %><br>
+
+    <div class="caption">
+      <p><strong>Your E-mail:</strong> <%= current_user.email %></p>
+      <p><strong>Your Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+      <p><strong>Brand: </strong><%= @product.brand.description %></p>
+       <p><strong>My Discount: </strong>99% Off Next Order - Need to Code</p>
+      <p><%= link_to 'Submit - Looks Good!', "/products/#{@product.id}/submit", class: "btn btn-success btn-block" %></p>
+      <p><button class="btn btn-warning btn-block" <a href="/brands/<%= @product.brand.id %>">Edit Submission</button></a></p>
+    </div>
+  </div>
+</div>

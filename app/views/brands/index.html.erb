@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th class="text-center">Brand Name</th>
+      <th class="text-center">Brand Id</th>
       <th class="text-center">Preview Image</th>
       <th class="text-center">Update</th>
       <th class="text-center">Delete</th>
@@ -18,10 +19,11 @@
     <% @brands.each do |brand| %>
       <tr>
         <td style="vertical-align:middle;"><%= brand.description %></td>
+        <td style="vertical-align:middle;"><%= brand.id %></td>
         <td style="vertical-align:middle;"><%= image_tag brand.image(:thumb) %></td>
         <!-- <td><%= link_to 'Show', brand %></td> -->
         <td style="vertical-align:middle;"><%= link_to 'Edit', edit_brand_path(brand), class: "btn btn-warning"  %></td>
-        <td style="vertical-align:middle;"><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
+        <td style="vertical-align:middle;"><%= link_to 'Delete', brand, method: :delete, data: { confirm: 'Are you sure you want to delete?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>

@@ -19,9 +19,9 @@
       <tr>
         <td style="vertical-align:middle;"><%= product.name %></td>
         <td style="vertical-align:middle;"><%= product.brand_id %></td>
-        <td style="vertical-align:middle;"><%= image_tag product.image, width: "100px" %></td>
+        <td style="vertical-align:middle;"><%= image_tag product.image(:thumb) %></td>
         <td style="vertical-align:middle;"><%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %></td>
-        <td style="vertical-align:middle;"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <td style="vertical-align:middle;"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
