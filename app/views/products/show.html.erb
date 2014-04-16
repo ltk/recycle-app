@@ -1,3 +1,15 @@
-<%= @product.name %>
 
-<%= link_to 'Submit recycling', "/products/#{@product.id}/submit" %>
+<div class="row">
+  <div class="container col-md-push-3 col-md-6 text-center">
+    <h3>Hey...Please Review Your Reclaim</h3>
+      <p><strong>Your E-mail:</strong> <%= current_user.email %></p>
+      <p><strong>Your Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+      <p><strong>Brand:</strong><%= @product.brand.description %></p>
+      <img src="<%= @product.image %>"><br>
+      <br>
+      <%= link_to 'Submit recycling', "/products/#{@product.id}/submit", class: "btn btn-warning btn-block" %>
+  </div>
+
+
+</div>
+

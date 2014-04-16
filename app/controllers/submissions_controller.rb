@@ -23,6 +23,7 @@ class SubmissionsController < ApplicationController
   end
 
   def show
+    SubmissionMailer.submission_email(current_user).deliver
     @submission = Submission.find(params[:id])
   end
 

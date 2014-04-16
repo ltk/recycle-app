@@ -1,10 +1,16 @@
 <div class="row">
-  <div class="container col-md-push-3 col-md-5">
-    <h3>Please Review Your Submission</h3>
-      <%= @submission.user.email %><br>
-      <%= @submission.brand.description %><br>
-      <%= @submission.product.name %><br>
-      <%= @submission.created_at %>
+  <div class="container col-md-push-3 col-md-6 text-center">
+    <h3>Thanks!</h3>
+     
+     <p>We've locked-in your submission.</p>
+     <p>We'll watch for your <strong><%= @submission.product.name %></strong> at our recycling center.</p>
+     <p>Once we receive your <%= @submission.product.name %> we'll send you your DISCOUNT via e-mail.</p>
+
+     <p>You can review the status of your return HERE-FEATURE-BUTTON.</p>
+
+     <br>
+
+     <a href="#" class="btn btn-primary btn-success">My Recycled Products <span class="glyphicon glyphicon-user"></span></a>
 
   </div>
 
