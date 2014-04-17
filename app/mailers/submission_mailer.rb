@@ -4,6 +4,6 @@ class SubmissionMailer < ActionMailer::Base
   def submission_email(user)
     @user = user
     @url  = 'http://plus-recycle.herokuapp.com/'
-    mail(from: 'PLUSfoam', to: @user.email, subject: 'We received your reclaim request!')
+    mail(to: @user.email, subject: 'We received your reclaim request!')
   end
 end
