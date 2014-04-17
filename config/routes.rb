@@ -16,4 +16,5 @@ Recycle::Application.routes.draw do
   get "about" => "pages#about"
   get "submissions" => "submissions#index"
   get "faq" => "pages#faq"
+  get "about" => "pages#about"
 end
