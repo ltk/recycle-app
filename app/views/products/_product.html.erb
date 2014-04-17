@@ -1,6 +1,6 @@
 <!-- <%= link_to product.name, product_path(product) %> -->
 
-<%= link_to image_tag(product.image.url(:large), class: "product-image-medium"), product_path(product), class: "product-link" %>
+<%= link_to image_tag(product.image.url(:large), class: "product-image-medium"), product_path(product), div: "image-product", class: "product-link" %>
 
 
 <!-- 

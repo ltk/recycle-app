@@ -1,17 +1,26 @@
 <div class="row">
   <div class="container col-md-push-3 col-md-6 text-center">
-    <h3>Thanks!</h3>
+    <h2>Thanks!</h2>
+
+    <div class= "text-center" style="width: 100%;" id="_giphy_qHho9D3nk3nS8"></div>
+<script>var _giphy = _giphy || []; _giphy.push({id: 'qHho9D3nk3nS8',w: 500, h: 271});var g = document.createElement('script'); g.type = 'text/javascript'; g.async = true;g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'giphy.com/static/js/widgets/embed.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(g, s);</script>
      
      <p>We've locked-in your submission.</p>
      <p>We'll watch for your <strong><%= @submission.product.name %></strong> at our recycling center.</p>
-     <p>Once we receive your <%= @submission.product.name %> we'll send you your DISCOUNT via e-mail.</p>
+     <p>Once we receive your product we'll send you your DISCOUNT via e-mail.</p>
 
      <p>You can review the status of your return HERE-FEATURE-BUTTON.</p>
 
      <br>
 
-     <a href="#" class="btn btn-primary btn-success">My Recycled Products <span class="glyphicon glyphicon-user"></span></a>
 
+     <p> <a href="#" class="btn btn-lg btn-primary"><i class="fa fa-facebook"></i>  SHARE ON FACEBOOK</a>   <a href="https://twitter.com/share" class="btn  btn-lg btn-info twitter-share" data-related="pluscompound" data-lang="en" data-size="large" data-text="I <3 the earth and just recycled my <%= @submission.brand.description %> <%= @submission.product.name %> that are made with 100% recyclable PLUSfoam. Join me! http://bit.ly/1pdxWrU" data-count="none">SHARE ON TWITTER <i class="fa fa-twitter"></i></span></a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+
+    <br>
+<!--       <a href="#" class="btn btn-default">My Recycled Products <span class="glyphicon glyphicon-user"></span></a>
+ -->
   </div>
 
 
