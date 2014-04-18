@@ -9,6 +9,7 @@
     <tr>
       <th class="text-center">Brand Name</th>
       <th class="text-center">Brand Id</th>
+      <th class="text-center">Discount</th>
       <th class="text-center">Preview Image</th>
       <th class="text-center">Update</th>
       <th class="text-center">Delete</th>
@@ -20,6 +21,7 @@
       <tr>
         <td style="vertical-align:middle;"><%= brand.description %></td>
         <td style="vertical-align:middle;"><%= brand.id %></td>
+        <td style="vertical-align:middle;"><%= brand.discount %></td>
         <td style="vertical-align:middle;"><%= image_tag brand.image(:thumb) %></td>
         <!-- <td><%= link_to 'Show', brand %></td> -->
         <td style="vertical-align:middle;"><%= link_to 'Edit', edit_brand_path(brand), class: "btn btn-warning"  %></td>
