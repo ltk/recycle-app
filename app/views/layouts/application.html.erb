@@ -1,28 +1,31 @@
+<!-- Hey! I'm Chase Olivieri, the CTO & lead RoR dev at PLUSfoam. Thanks for taking a peek under the hood :) We're always looking for talented, driven dev's that are passionate about making a difference in the world. If that sounds like you...shoot me a note @chasefoto or co@plusfoam.com and let's chat. -->
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PLUSfoam Recycling</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-<body>
+  <head>
+    <title>PLUSfoam Technologies - Smarter, Better Material Solutions</title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
     
-    <%= render 'layouts/header' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
-    <div class="container">
+  <body> 
+      <%= render 'layouts/header' %>
+
+      <div class="container">
 
         <% flash.each do |name, msg| %>
-         <br>
-          <%= content_tag(:div, msg, class: "alert alert-info") %>
+          <br>
+            <%= content_tag(:div, msg, class: "alert alert-info") %>
         <% end %>
-      <%= yield %>
-    </div>
-  
-<!--   <div class="container"> -->
-    <%= render 'layouts/footer' %>
-<!--     </div> -->
-</body>
+        
+        <%= yield %>
+      </div>
+    
+      <%= render 'layouts/footer' %>
+
+  </body>
+
 </html>

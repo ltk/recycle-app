@@ -4,9 +4,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-  def after_sign_in_path_for(users)
-    reclaim_path
-  end
+  # def after_sign_in_path_for(user)
+  #   reclaim_path
+  # end
+
+  def after_sign_in_path_for(resource)
+    if current_admin
+      submissions_path
+    else
+      reclaim_path
+    end
+  end 
 
   def authenticate_admin!
     redirect_to new_admin_session_path, notice: 'Sorry only administrators can see view the dashboard.' unless current_admin
