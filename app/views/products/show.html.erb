@@ -1,13 +1,12 @@
 <br>
 
 <ol class="breadcrumb">
-  <li><%= link_to "Home", root_path %></li>
   <li><%= link_to "Brands", reclaim_path %></li>
   <li><a href="/brands/<%= @product.brand.id %>">Products</a></li>
   <li class="active">Review & Submit</li>
 </ol>
   
-<h3 class="text-center">Hey...Please Review Your Reclaim</h3>
+<h3 class="text-center">You're almost done! <small> Please review your submission details.</small></h3>
 
 <!-- <div class="row">
   <div class="container col-md-push-3 col-md-6 text-center">
@@ -35,7 +34,7 @@
       <p><strong>Brand: </strong><%= @product.brand.description %></p>
        <p><strong>My Discount: </strong><%= @product.brand.discount %></p>
       <p><%= link_to 'Submit - Looks Good!', "/products/#{@product.id}/submit", class: "btn btn-success btn-block" %></p>
-      <p><button class="btn btn-warning btn-block" <a href="/brands/<%= @product.brand.id %>">Edit Submission</button></a></p>
+      <p><a href="/brands/<%= @product.brand.id %>" class="btn btn-warning btn-block">Edit Submission</button></a></p>
     </div>
   </div>
 </div>
