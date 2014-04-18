@@ -30,8 +30,8 @@ class SubmissionsController < ApplicationController
   def change_status
     submission = Submission.find(params[:id])
     if submission.status == Submission::STATUS_PENDING
+      SubmissionMailer.received_email(submission.user).deliver
       submission.update_attribute(:status, Submission::STATUS_RECEIVED) 
-        SubmissionMailer.received_email(current_user).deliver
     else
       submission.update_attribute(:status, Submission::STATUS_PROCESSED)
     end
