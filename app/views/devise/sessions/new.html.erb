@@ -1,11 +1,3 @@
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <p>Facebook authentication coming soon! Please sign-in with an e-mail address</p>
-    </div>
-  </div>
-</div>
-
 <br>
 <br>
 <div class="row">
@@ -32,16 +24,13 @@
         <div class="form-group">
           <!-- <%= f.label :email %>-->
           <%= f.email_field :email, placeholder: "E-mail Address", class: "default-input", :autofocus => true %>
-        </div>
-
-         <div class="form-group">
             <!-- <label for="inputPassword">Password</label> -->
             <%= f.password_field :password, class: "default-input", placeholder: "Password" %>
-          </div>
-        <a class="pull-left" href="#">Forgot password?</a>
+        <h4><a class="pull-left" href="#">Forgot password?</a></h4>
         <button type="submit" class="btn btn btn-primary btn-lg pull-right">
           Log In >
         </button>
+        </div>
         </form>
       <% end %>
     </div>

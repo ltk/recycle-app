@@ -1,45 +1,52 @@
-<div class="container col-md-push-3 col-md-5">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <h1>Edit <%= resource_name.to_s.humanize %></h1>
-      </div>
-    </div>
-    <div class="panel-body">
+<br>
+<br>
+<div class="row">
+ <div class="col-md-offset-2 col-md-8">
+  <h3 class="text-left">Edit User</h3>
+  </div>
+    <br>
+    <br>
+  <div class="col-md-offset-2 col-md-4">
+    <div class="edit-user-column">
+
+
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
         
         <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: "default-input", :autofocus => true %>
+          <%= f.text_field :first_name, autofocus: true, class: "default-input", placeholder: "First Name" %>
+
+          <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
+
+          <%= f.email_field :email, class: "default-input", :autofocus => true, placeholder: "Email Address" %>
         </div>
+      </div>
+    </div>  
 
-        <div class="form-group">
-          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-          <%= f.password_field :password, class: "default-input", :autocomplete => "off" %>
-        </div>
+  <div class="col-md-4">
+    <div class="edit-user-column">
 
-        <div class="form-group">
-          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-          <%= f.password_field :current_password, class: "default-input" %>
-        </div>
 
-        <div class="form-group">
-          <%= f.label :zipcode %>
-          <%= f.text_field :zipcode, class: "default-input" %>
-        </div>
+      <div class="form-group">
+          <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %>
+    
+          <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %>
 
-        <div class="form-group">
-          <%= f.submit "Update", class: "btn btn-primary btn-block" %>
-        </div>
-      <% end %>
-    </div>
-    <div class="panel-footer">
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
-
-      <%= link_to "Back", :back %>
+          <%= f.text_field :zipcode, class: "default-input", placeholder: "Zipcode" %>
+ 
+        </div>   
     </div>
   </div>
+ 
+ <div class="col-md-offset-2 col-md-8">
+    <%= f.submit "Update My Information", class: "btn btn-primary btn-block" %>
+       <% end %>
+  </div>
+
+
+  <div class="col-md-offset-2 col-md-8">
+   <br>
+  <h3 class="text-left">My Reclaim History – Coming Soon!</h3>
+  </div>
+    <br>
 </div>
