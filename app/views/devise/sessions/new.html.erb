@@ -6,48 +6,54 @@
   </div>
 </div>
 
-
-  <div class="row">
-
-    <div class="main">
-
-      <h3>Please Log In, or <%= link_to "Sign Up",  new_user_registration_path %></h3>
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <a href="#" class="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target=".bs-example-modal-sm">Facebook</a>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-offset-2 col-md-4">
+    <div class="log-in-column">
+      <h3>Log in</h3>
+        <!-- <div class="row">
+          
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="#" class="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target=".bs-example-modal-sm">Facebook</a>
+          </div>
+          
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="#" class="btn btn-lg btn-info btn-block">Twitter</a>
+          </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
-        </div>
-      </div>
       <div class="login-or">
         <hr class="hr-or">
         <span class="span-or">or</span>
-      </div>
+      </div> -->
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
         <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: "default-input", :autofocus => true %>
+          <!-- <%= f.label :email %>-->
+          <%= f.email_field :email, placeholder: "E-mail Address", class: "default-input", :autofocus => true %>
         </div>
 
          <div class="form-group">
-          <a class="pull-right" href="#">Forgot password?</a>
-          <label for="inputPassword">Password</label>
-           <%= f.password_field :password, class: "default-input" %>
-        </div>
-        <div class="checkbox pull-right">
-          <label>
-            <input type="checkbox">
-            Remember me </label>
-        </div>
-        <button type="submit" class="btn btn btn-primary">
-          Log In
+            <!-- <label for="inputPassword">Password</label> -->
+            <%= f.password_field :password, class: "default-input", placeholder: "Password" %>
+          </div>
+        <a class="pull-left" href="#">Forgot password?</a>
+        <button type="submit" class="btn btn btn-primary btn-lg pull-right">
+          Log In >
         </button>
-      </form>
+        </form>
       <% end %>
-
     </div>
   </div>
 
+    <div class="col-md-5 text-center">
+      <br>
+      <br>
+      <br>
+        <h3>New around here? Let's Get Started.</h3>
+      
+        <%= link_to "Sign Up",  new_user_registration_path, class: "btn btn-info btn-lg" %>
+        </div>
+
+    </div>

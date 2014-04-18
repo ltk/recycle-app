@@ -1,47 +1,40 @@
- <div class="row">
+<br>
+<br>
+<div class="row">
+  <div class="col-md-offset-2 col-md-4">
+    <div class="sign-up-column">
 
-    <div class="main">
-
-
-
-     <div class="row">
-    <h3 class="text-center">Let's Sign-Up!</h3>
+    <h3 class="text-left">Create a free account</h3>
        
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
 
             <div class="form-group">
-              <%= f.label :first_name %>
-              <%= f.text_field :first_name, autofocus: true, class: "default-input" %>
-            </div>
+              <%= f.text_field :first_name, autofocus: true, class: "default-input", placeholder: "First Name" %>
 
-            <div class="form-group">
-              <%= f.label :last_name %>
-              <%= f.text_field :last_name, class: "default-input" %>
-            </div>
+              <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
 
-            <div class="form-group">
-              <%= f.label :email %>
-              <%= f.email_field :email, class: "default-input" %>
-            </div>
+              <%= f.email_field :email, class: "default-input", placeholder: "E-mail Address" %>
+  
+              <%= f.password_field :password, class: "default-input", placeholder: "Password" %>
 
-            <div class="form-group">
-              <%= f.label :password %>
-              <%= f.password_field :password, class: "default-input" %>
-            </div>
+              <%= f.text_field :zipcode, class: "default-input", placeholder: "Zipcode" %>
 
-            <div class="form-group">
-              <%= f.label :zipcode %>
-              <%= f.text_field :zipcode, class: "default-input" %>
-            </div>
-
-            <div class="form-group">
-              <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+              <%= f.submit "Sign up", class: "btn btn-primary btn-lg pull-right" %>
             </div>
           <% end %>
         </div>
       </form>
       </div>
+
+    <div class="col-md-5 text-center">
+      <br>
+      <br>
+        <h3>Already registered? Sign-in</h3>
+      
+        <%= link_to "Sign In",  new_user_session_path, class: "btn btn-info btn-lg" %>
+        </div>
+
     </div>
 
 
