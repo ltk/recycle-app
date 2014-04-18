@@ -120,7 +120,13 @@ img.product-image-medium {
   width: 250px;
 }
 
+div.container img {
+opacity: .7;
+}
 
+div.container img:hover {
+opacity: 1;
+}
 
 /* FOOTER */
 
