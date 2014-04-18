@@ -3,21 +3,21 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Submission Time</th>
+      <th>Date</th>
       <th>Status</th>
       <th>Name</th>
       <th>Email</th>
-      <th>Product</th>
       <th>Brand</th>
+      <th>Product</th>
       <th></th>
-      <th>Update</th>
+      <th>Update Status</th>
     </tr>
   </thead>
 
   <tbody>
     <% @submission.each do |submission| %>
       <tr>
-        <td style="vertical-align:middle;"><%= submission.created_at %></td>
+        <td style="vertical-align:middle;"><%= submission.created_at.strftime("%m/%d/%Y") %></td>
         <% case submission.status %>
           <% when Submission::STATUS_PENDING %>
             <td style="vertical-align:middle;"><button class="btn btn-xs btn-danger"><%= submission.status_string %></button></td>
@@ -28,8 +28,8 @@
         <% end %>
         <td style="vertical-align:middle;"><%= submission.user.first_name %> <%= submission.user.last_name %></td>
         <td style="vertical-align:middle;"><%= submission.user.email %></td>
-        <td style="vertical-align:middle;"><%= submission.product.name %></td>
         <td style="vertical-align:middle;"><%= submission.brand.description %></td>
+        <td style="vertical-align:middle;"><%= submission.product.name %></td>
         <td style="vertical-align:middle;"><%= image_tag submission.product.image, width: "100px" %></td>
         <% if submission.status == Submission::STATUS_PENDING %>
           <td style="vertical-align:middle;"><%= link_to 'Received', change_status_submission_path(submission), class: "btn btn-warning", method: :post %></td>

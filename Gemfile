@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'font-awesome-sass'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 1.20.0'
+gem 'easypost'
 
 group :development, :test do
      gem 'sqlite3'
