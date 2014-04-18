@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate_user!, except: [:home, :faq]
+  before_filter :authenticate_user!, only: [:reclaim]
   def home
   end
 

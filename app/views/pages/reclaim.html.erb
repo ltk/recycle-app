@@ -1,11 +1,13 @@
-<h1 class="text-center">Let's Get Started!</h1>
+<br>
 
-<h3>Please select the brand first so we can show you all the relevant products.</h3>
+  <ol class="breadcrumb">
+    <li class="active"><%= link_to "Brands", reclaim_path %></li>
+  </ol>
+  
+
+  <h3 class="text-center">Hi! Please select a brand, then select the product you would like to recycle.
+  </h3>
 
 <br>
 
-<%= render @brands %>
-
-
-<br>
-<br>
+  <%= render @brands %>

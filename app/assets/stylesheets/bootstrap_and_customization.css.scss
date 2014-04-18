@@ -62,21 +62,27 @@ margin-left: 10px;
 /* HOME PAGE */
 
 .splash {
-  height: 35em;
-  padding-top: 9em;
+  height: 33em;
+  padding-top: 10%;
 /*  margin-bottom: 2em */  
-  background-image: url("http://i.imgur.com/lXG1upT.jpg?1");
+/*  background-color: #3bb878; */
+/*  background-image: url("http://i.imgur.com/lXG1upT.jpg?1"); */
+
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/congruent_pentagon.png");
   background-size: cover;
   color: #fff;
   text-align: center;
 }
 
 .splash h1 {
-  font-size: 3.5em;
+  font-size: 4.5em;
+  color: black;
 }
 
 .splash p {
   font-size: 1.5em;
+  font-weight: 300;
+  color: black;
 }
 
 /* HOME PAGE BOXES */
@@ -100,7 +106,7 @@ margin-left: 10px;
 
 /* BRAND PAGE */
 
-.brand-image {
+img.brand-image-logo {
   display: block;
   float: left;
   width: 204px;
@@ -120,11 +126,11 @@ img.product-image-medium {
   width: 250px;
 }
 
-div.container img {
+img.brand-image-logo {
 opacity: .7;
 }
 
-div.container img:hover {
+img.brand-image-logo:hover {
 opacity: 1;
 }
 
@@ -272,4 +278,46 @@ padding: 4em 0 3em;
 border-top: 1px solid rgba(255,255,255,0.1);
 border-bottom: 1px solid rgba(0,0,0,0.1);
 background-color: #eaf1f1;
+}
+
+/* MARKETING PAGE */
+
+.splash-marketing {
+  height: 32em;
+  padding-top: 10em;
+/*  margin-bottom: 2em */  
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/PLUS.Header.Dark_.jpg");
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.splash-marketing h1 {
+  font-size: 3.5em;
+}
+
+.splash-marketing p {
+  font-size: 1.5em;
+}
+
+/* ABOUT PAGE */
+
+
+.splash-about {
+  height: 32em;
+  padding-top: 12%;
+/*  margin-bottom: 2em */  
+  background-image: url("http://plusfoam.com/2012PLUS/wp-content/uploads/2012/07/PLUS.Vans_.Savings-e1381251013439.jpg");
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+
+.splash-about h1 {
+  font-size: 3.5em;
+}
+
+.splash-about p {
+  font-size: 1.5em;
 }

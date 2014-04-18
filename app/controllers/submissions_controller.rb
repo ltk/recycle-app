@@ -1,5 +1,6 @@
 class SubmissionsController < ApplicationController
-  
+  before_filter :authenticate_admin!, only: [:index, :edit, :destroy]
+
   def index
     @submission = Submission.all
   end
