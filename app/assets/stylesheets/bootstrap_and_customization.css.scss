@@ -25,8 +25,17 @@ p {
 /* NAV BAR */
 
 nav.navbar.navbar-default {
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   margin-bottom: 0px;
+}
+
+ul.nav.navbar-nav {
+  padding-top: 5px;
+}
+
+a.btn.btn-success.btn-md.navbar-btn.fa.fa-refresh {
+margin-top: 12px;
+margin-left: 10px;
 }
 
 /* FORUM UPDATES */
@@ -53,7 +62,7 @@ nav.navbar.navbar-default {
 .splash {
   height: 35em;
   padding-top: 9em;
-  margin-bottom: 2em;
+/*  margin-bottom: 2em */  
   background-image: url("http://i.imgur.com/lXG1upT.jpg?1");
   background-size: cover;
   color: #fff;
@@ -118,6 +127,88 @@ img.product-image-medium {
   padding-top: 20px;
 }
 
+#footer {
+  width: 100%;
+  float: left;
+  color: #999;
+  background-color: #444;
+  font-size: 11px;
+  border-bottom: 7px solid #333;
+}
+#footer-content {
+/*  width: 1200px;*/  
+  margin: 0 auto;
+}
+
+#footer {
+  color: #999;
+  font-size: 11px;
+  float: left;
+  margin-top: 50px; /*was 50*/
+}
+#footer a {
+  color: #ccc;
+  font-weight: bold;
+}
+#footer a:hover {
+}
+#footer h3 {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  display: block;
+}
+#footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#footer ul li {
+  margin-bottom:15px;
+}
+#footer ul li .date {
+  font: normal 11px/20px Helvetica,Arial,sans-serif;
+    display: block;
+}
+#footer-content {
+  padding: 0 30px;
+  background-color: #444;
+}
+#footer-bottom, #footer-top {
+  padding: 35px 0;
+  overflow: hidden;
+  position: relative;
+}
+#footer-bottom {
+  /* background-color: #333; */
+  font-size: 12px;
+  /*border-top: 1px dotted #777;*/
+  padding: 25px 25px 18px 25px;
+}
+#footer-bottom p {
+  margin-bottom: 0;
+}
+#footer-bottom a {
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#footer-bottom a {
+  margin-right: 35px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
 /* LOG-IN TESTING */
 
   .main {
@@ -150,3 +241,27 @@ img.product-image-medium {
     margin-bottom: 0px !important;
   }
   
+  /* TYPOGRAPHY */ 
+.feature-detail {
+  font-size: 18px;
+  color: #858585;
+}
+
+.title-features-blue {
+font-size: 1.3em;
+line-height: 20px;
+font-weight: 700;
+font-family: "proxima-nova", sans-serif;
+text-transform: uppercase;
+color: #169fda;
+letter-spacing: 1.1px;
+}
+
+/* TOUT SECTION */
+
+.section-tout {
+padding: 4em 0 3em;
+border-top: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid rgba(0,0,0,0.1);
+background-color: #eaf1f1;
+}

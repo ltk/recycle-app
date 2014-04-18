@@ -7,14 +7,12 @@
 <br>
      <p>We've locked-in your submission.</p>
      <p>We'll watch for your <strong><%= @submission.brand.description %></strong> product at our recycling center.</p>
-     <p>Once we receive your product we'll send you your DISCOUNT via e-mail.</p>
-
-     <p>You can review the status of your return HERE-FEATURE-BUTTON.</p>
-
+     <p>Please check your e-mail for a link to your mailing label.</p> 
+     <p>We're looking forward to receiving your product!</p>
      <br>
 
 
-     <p> <a href="#" class="btn btn-lg btn-primary"><i class="fa fa-facebook"></i>  SHARE ON FACEBOOK</a>   <a href="https://twitter.com/share" class="btn  btn-lg btn-info twitter-share" data-related="pluscompound" data-lang="en" data-size="large" data-text="I <3 the earth and just recycled my <%= @submission.brand.description %> <%= @submission.product.name %> that are made with 100% recyclable PLUSfoam. Join me! http://bit.ly/1pdxWrU" data-count="none">SHARE ON TWITTER <i class="fa fa-twitter"></i></span></a>
+     <p> <a href="#" class="btn btn-lg btn-primary"><i class="fa fa-facebook"></i>  SHARE ON FACEBOOK</a>   <a href="https://twitter.com/intent/tweet?text=I%20%3C3%20the%20earth%20and%20just%20recycled%20my%20%40<%= @submission.brand.description %>%20product%20that%20is%20made%20with%20%40PLUScompound.%20Join%20me!%20bit.ly%2F1pdxWrU" class="btn  btn-lg btn-info twitter-share" data-related="pluscompound" data-lang="en" data-size="large" data-text="I <3 the earth and just recycled my <%= @submission.brand.description %> <%= @submission.product.name %> that are made with 100% recyclable PLUSfoam. Join me! http://bit.ly/1pdxWrU" data-count="none">SHARE ON TWITTER <i class="fa fa-twitter"></i></span></a>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
 
@@ -22,6 +20,5 @@
 <!--       <a href="#" class="btn btn-default">My Recycled Products <span class="glyphicon glyphicon-user"></span></a>
  -->
   </div>
-
 
 </div>

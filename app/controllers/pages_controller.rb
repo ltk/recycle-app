@@ -4,9 +4,17 @@ class PagesController < ApplicationController
   end
 
   def about
+    @brands = Brand.all
+    @products = Product.all
   end
 
   def faq
+  end
+
+  def marketing
+  end
+
+  def materials
   end
 
   def reclaim
