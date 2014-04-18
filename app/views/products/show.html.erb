@@ -33,7 +33,7 @@
       <p><strong>Your E-mail:</strong> <%= current_user.email %></p>
       <p><strong>Your Name:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
       <p><strong>Brand: </strong><%= @product.brand.description %></p>
-       <p><strong>My Discount: </strong>99% Off Next Order - Need to Code</p>
+       <p><strong>My Discount: </strong><%= @product.brand.discount %></p>
       <p><%= link_to 'Submit - Looks Good!', "/products/#{@product.id}/submit", class: "btn btn-success btn-block" %></p>
       <p><button class="btn btn-warning btn-block" <a href="/brands/<%= @product.brand.id %>">Edit Submission</button></a></p>
     </div>

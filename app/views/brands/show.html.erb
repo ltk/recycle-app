@@ -10,10 +10,16 @@
   <li class="active">Select Product</li>
 </ol>
 
-<h3>
-  <strong><%= @brand.description %>'s PLUSfoam Products</strong>
-</h3>
-<p>Please select the PLUSfoam product that you would like to recycle.</p>
+
+<h3><%= @brand.description %>'s PLUSfoam Products <small>• Please select the product that you would like to recycle.</small></h3>
+
+<div id="discount">
+  <% if @brand.discount == "N/A (Discount Coming Soon)" %>
+    <p></p>
+  <% else %>
+    <div class="alert alert-success">By recycling your product you'll save <%= @brand.discount %>. Wahoo, way to go!</div>
+  <% end %>
+</div>
 
 <!-- <%= link_to 'Edit', edit_brand_path(@brand) %> |
 <%= link_to 'Back', brands_path %> -->
