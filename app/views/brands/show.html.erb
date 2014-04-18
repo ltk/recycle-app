@@ -16,7 +16,9 @@
   <% if @brand.discount == "N/A (Discount Coming Soon)" %>
     <p></p>
   <% else %>
-    <div class="alert alert-success">By recycling your product you'll save <%= @brand.discount %>. Wahoo, way to go!</div>
+    <div class="alert alert-success alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    By recycling your product you'll save <%= @brand.discount %>. Wahoo, way to go!</div>
   <% end %>
 </div>
 
