@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_filter :authenticate_user!, only: [:reclaim]
+
   def home
   end
 
@@ -15,6 +16,12 @@ class PagesController < ApplicationController
   end
 
   def materials
+  end
+
+  def contact
+  end
+
+  def dashboard
   end
 
   def reclaim

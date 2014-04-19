@@ -14,9 +14,12 @@ Recycle::Application.routes.draw do
 
   get "reclaim" => "pages#reclaim"
   get "about" => "pages#about"
-  get "submissions" => "submissions#index"
+  get "admin" => "submissions#index"
   get "faq" => "pages#faq"
   get "about" => "pages#about"
   get "marketing" => "pages#marketing"
   get "materials" => "pages#materials"
+  get "contact" => "pages#contact"
+  get "dashboard" => "pages#dashboard"
+  
 end
