@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_filter :authenticate_user!, only: [:reclaim]
+  before_filter :authenticate_admin!, only: [:dashboard]
 
   def home
   end

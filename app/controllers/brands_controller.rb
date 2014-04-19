@@ -1,6 +1,6 @@
 class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_admin!, only: [:index]
+  before_filter :authenticate_admin!, only: [:index, :edit, :destroy]
   
   def index
     @brands = Brand.all
