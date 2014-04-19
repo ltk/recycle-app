@@ -30,12 +30,13 @@
                   <li><%= link_to " My Reclaims", '#', class: "fa fa-envelope" %></li>
                   <li><%= link_to " Log out", destroy_user_session_path, method: :delete, class: "fa fa-power-off" %></li>
                   </li>
-                  <li>
-            <form>
-              <%= link_to "  Recycle a Product", reclaim_path, class: "btn btn-success btn-md navbar-btn fa fa-refresh" %>
-            </form>
-          </li>
                 </ul>
+
+                  <li>
+                    <form>
+                      <%= link_to "  Recycle a Product", reclaim_path, class: "btn btn-success btn-md navbar-btn fa fa-refresh" %>
+                    </form>
+                  </li>
         <% elsif admin_signed_in? %>
          <li><a href="#">ADMIN MODE</a></li>
           <li>
