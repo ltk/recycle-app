@@ -1,5 +1,5 @@
 class SubmissionsController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_admin!, except: [:show]
 
   def index
     @submission = Submission.all
