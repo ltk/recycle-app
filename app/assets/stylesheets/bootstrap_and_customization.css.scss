@@ -134,6 +134,19 @@ img.brand-image-logo:hover {
 opacity: 1;
 }
 
+div.product-images img {
+opacity: .5;
+}
+
+div.product-images img:hover {
+opacity: 1;
+}
+
+div.product-images {
+text-align: center;
+margin: 0 auto;
+}
+
 /* FOOTER */
 
 .container.footer {
