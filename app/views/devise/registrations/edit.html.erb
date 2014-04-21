@@ -11,7 +11,7 @@
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
         
-        <div class="form-group">
+        
           <%= f.text_field :first_name, autofocus: true, class: "default-input", placeholder: "First Name" %>
 
           <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
@@ -21,15 +21,13 @@
           <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %>
     
           <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %>
-        </div>
+        
       </div> 
 
   <div class="col-md-4">
 
-      <div class="form-group">
+      
           <%= f.text_field :street1, class: "default-input", placeholder: "Street Address" %>
-
-          <%= f.text_field :street2, class: "default-input", placeholder: "Apartment Number" %>
 
           <%= f.text_field :city, class: "default-input", placeholder: "City" %>
 
@@ -37,7 +35,7 @@
 
           <%= f.text_field :zipcode, class: "default-input", placeholder: "Zipcode" %>
  
-        </div>   
+        
     </div>
   </div>
  
