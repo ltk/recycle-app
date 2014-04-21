@@ -320,7 +320,7 @@ background-color: #eaf1f1;
   height: 32em;
   padding-top: 12%;
 /*  margin-bottom: 2em */  
-  background-image: url("http://plusfoam.com/2012PLUS/wp-content/uploads/2012/07/PLUS.Vans_.Savings-e1381251013439.jpg");
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/recycling.plus.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -329,10 +329,42 @@ background-color: #eaf1f1;
 
 .splash-about h1 {
   font-size: 3.5em;
+  color: black;
 }
 
 .splash-about p {
   font-size: 1.5em;
+  color: black;
 }
 
 .panel-body .btn:not(.btn-block) { width:100%;margin-bottom:10px; }
+
+
+/* CENTER COLUMNS */
+
+.col-md-7, .col-md-5 {
+  float:none;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:-4px;
+}
+
+/* MATERIALS */
+
+.splash-materials {
+  height: 32em;
+  padding-top: 12%;
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/rollers.plus.jpg");
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+
+.splash-materials h1 {
+  font-size: 3.5em;
+}
+
+.splash-materials p {
+  font-size: 1.5em;
+}
