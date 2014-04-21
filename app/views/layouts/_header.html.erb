@@ -38,7 +38,7 @@
                     </form>
                   </li>
         <% elsif admin_signed_in? %>
-         <li> <form><%= link_to "ADMIN DASHBOARD", dashboard_path, class: "btn btn-default btn-md navbar-btn" %> </form> </li>
+         <li> <form><%= link_to "ADMIN DASHBOARD", dashboard_path, class: "btn btn-default btn-md navbar-btn" %> </form></li>
           <li>
             <form>
               <%= link_to " Log out", destroy_admin_session_path, method: :delete, class: "btn btn-danger btn-md navbar-btn" %></li>

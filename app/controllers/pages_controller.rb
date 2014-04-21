@@ -25,6 +25,9 @@ class PagesController < ApplicationController
   def dashboard
   end
 
+  def labels
+  end
+
   def reclaim
     @brands = Brand.all
   end

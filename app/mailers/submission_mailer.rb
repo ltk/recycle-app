@@ -1,5 +1,5 @@
 class SubmissionMailer < ActionMailer::Base
-  default from: "recycle@plusfoam.com"
+  default from: "PLUSfoam Recycling Team<recycle@plusfoam.com>"
 
   def submission_email(user)
     @user = user
