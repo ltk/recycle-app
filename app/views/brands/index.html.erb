@@ -19,7 +19,7 @@
   <tbody>
     <% @brands.each do |brand| %>
       <tr>
-        <td style="vertical-align:middle;"><%= brand.description %></td>
+        <td style="vertical-align:middle;"><%= link_to brand.description, brand_products_path(brand) %></td>
         <td style="vertical-align:middle;"><%= brand.id %></td>
         <td style="vertical-align:middle;"><%= brand.discount %></td>
         <td style="vertical-align:middle;"><%= image_tag brand.image(:thumb) %></td>

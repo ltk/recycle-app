@@ -2,8 +2,15 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_admin!, only: [:index, :edit, :destroy]
 
+  require 'easypost'
+
   def index
-    @products = Product.all
+    if params[:brand_id]
+      @brand = Brand.find(params[:brand_id])
+      @products = @brand.products
+    else
+      @products = Product.all
+    end
   end
 
   def show
@@ -33,7 +40,47 @@ class ProductsController < ApplicationController
 
   def submit
     product = Product.find(params[:id])
-    submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id)
+
+    EasyPost.api_key = 'q1VSlE8fuoRQoHlLYpq0Kg'
+
+    to_address = EasyPost::Address.create(
+      :name => 'PLUSfoam Recycling',
+      :street1 => '844 Production Place',
+      :street2 => '',
+      :city => 'Newport Beach',
+      :state => 'CA',
+      :zip => '92663',
+      :country => 'USA',
+      :phone => '780-273-8374'
+    )
+    from_address = EasyPost::Address.create(
+      :company => current_user.first_name + current_user.last_name,
+      :street1 => current_user.street1,
+      :city => current_user.city,
+      :state => current_user.state,
+      :zip => current_user.zipcode,
+      :country => 'USA',
+      :phone => '787-456-7890'
+    )
+
+    parcel = EasyPost::Parcel.create(
+      :width => 11.6,
+      :length => 15.2,
+      :height => 3,
+      :weight => 10
+    )
+
+    shipment = EasyPost::Shipment.create(
+      :to_address => to_address,
+      :from_address => from_address,
+      :parcel => parcel,
+    )
+
+    shipment.buy(
+      :rate => shipment.lowest_rate
+    )
+
+    submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id, label: shipment.postage_label.label_url)
     redirect_to submission_path(submission)
   end
 

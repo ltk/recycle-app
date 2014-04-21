@@ -27,7 +27,7 @@
       Welcome, <%= current_user.first_name %><span class="caret"></span></a>
             <ul class="dropdown-menu">
                   <li><%= link_to " Preferences", edit_user_registration_path, class: "fa fa-gear" %></li>
-                  <li><%= link_to " My Reclaims", '#', class: "fa fa-envelope" %></li>
+                  <li><%= link_to " My Reclaims", edit_user_registration_path, class: "fa fa-envelope" %></li>
                   <li><%= link_to " Log out", destroy_user_session_path, method: :delete, class: "fa fa-power-off" %></li>
                   </li>
                 </ul>

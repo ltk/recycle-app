@@ -27,7 +27,7 @@
             <td style="vertical-align:middle;"><button class="btn btn-xs btn-success"><%= submission.status_string %></button></td>
         <% end %>
         <td style="vertical-align:middle;"><%= submission.user.first_name %> <%= submission.user.last_name %></td>
-        <td style="vertical-align:middle;"><%= submission.user.email %></td>
+        <td style="vertical-align:middle;"><%= link_to submission.user.email, "mailto:#{submission.user.email}" %></td>
         <td style="vertical-align:middle;"><%= submission.brand.description %></td>
         <td style="vertical-align:middle;"><%= submission.product.name %></td>
         <td style="vertical-align:middle;"><%= image_tag submission.product.image, width: "100px" %></td>

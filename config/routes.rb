@@ -4,7 +4,9 @@ Recycle::Application.routes.draw do
   devise_for :users
   devise_for :admins
   
-  resources :brands
+  resources :brands do
+    resources :products
+  end
 
   resources :products
   get "/products/:id/submit" => "products#submit"  

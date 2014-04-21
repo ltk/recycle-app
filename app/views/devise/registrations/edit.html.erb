@@ -19,6 +19,10 @@
           <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
 
           <%= f.email_field :email, class: "default-input", :autofocus => true, placeholder: "Email Address" %>
+
+          <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %>
+    
+          <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %>
         </div>
       </div>
     </div>  
@@ -28,9 +32,13 @@
 
 
       <div class="form-group">
-          <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %>
-    
-          <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %>
+          <%= f.text_field :street1, class: "default-input", placeholder: "Street Address" %>
+
+          <%= f.text_field :street2, class: "default-input", placeholder: "Apartment Number" %>
+
+          <%= f.text_field :city, class: "default-input", placeholder: "City" %>
+
+          <%= f.text_field :state, class: "default-input", placeholder: "State" %>
 
           <%= f.text_field :zipcode, class: "default-input", placeholder: "Zipcode" %>
  
@@ -46,7 +54,39 @@
 
   <div class="col-md-offset-2 col-md-8">
    <br>
-  <h3 class="text-left">My Reclaim History – Coming Soon!</h3>
+  <h3 class="text-left">My Reclaim History</h3>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center">Date</th>
+        <th class="text-center">Status</th>
+        <th class="text-center">Brand</th>
+        <th class="text-center">Product</th>
+        <th class="text-center">Shipping Label Link</th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% current_user.submissions. each do |submission| %>
+      <tr>
+        <td class="text-center" style="vertical-align:middle;"><%= submission.created_at.strftime("%m/%d/%Y") %></td>
+      <% case submission.status %>
+          <% when Submission::STATUS_PENDING %>
+            <td class="text-center" style="vertical-align:middle;"><button class="btn btn-xs btn-danger"><%= submission.status_string %></button></td>
+          <% when Submission::STATUS_RECEIVED %>
+            <td class="text-center" style="vertical-align:middle;"><button class="btn btn-xs btn-warning"><%= submission.status_string %></button></td>
+          <% when Submission::STATUS_PROCESSED %>
+            <td class="text-center" style="vertical-align:middle;"><button class="btn btn-xs btn-success"><%= submission.status_string %></button></td>
+        <% end %>
+        <td class="text-center" style="vertical-align:middle;"><%= submission.brand.description %></td>
+        <td class="text-center" style="vertical-align:middle;"><%= submission.product.name %></td>
+        <td class="text-center" style="vertical-align:middle;"><%= link_to "Print Label", submission.label, target: "_blank" %></td>
+      </tr>
+    <% end %>
+</tbody>
+</table>
+</div>
   </div>
     <br>
 </div>
