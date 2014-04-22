@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   def submit
     product = Product.find(params[:id])
 
-    EasyPost.api_key = 'q1VSlE8fuoRQoHlLYpq0Kg'
+    EasyPost.api_key = ENV['EASYPOST_API_KEY']
 
     to_address = EasyPost::Address.create(
       :name => 'PLUSfoam Recycling',
