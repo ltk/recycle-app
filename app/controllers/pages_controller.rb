@@ -28,6 +28,12 @@ class PagesController < ApplicationController
   def labels
   end
 
+  def consumers
+  end
+
+  def manufacturers
+  end
+
   def reclaim
     @brands = Brand.all
   end

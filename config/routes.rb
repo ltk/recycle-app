@@ -24,5 +24,7 @@ Recycle::Application.routes.draw do
   get "contact" => "pages#contact"
   get "dashboard" => "pages#dashboard"
   get "labels" => "pages#labels"
+  get "consumers" => "pages#consumers"
+  get "manufacturers" => "pages#manufacturers"
   
 end
