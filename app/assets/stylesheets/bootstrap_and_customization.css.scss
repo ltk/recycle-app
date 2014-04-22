@@ -1,16 +1,11 @@
-@import 'bootstrap';
-
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-/* $body-bg:                                                   #ecf0f1; */
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@import 'bootstrap';
+
+$font-family-sans-serif:      'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
-/* $navbar-default-bg:                          white; */
 $navbar-default-brand-color:      #4dafe8;
 $brand-primary:                                    #4dafe8;
-/* $jumbotron-bg:                                         white; */
-
-@import 'bootstrap';
 
 .center { text-align: center; }
 
@@ -63,7 +58,7 @@ margin-left: 10px;
 
 .splash {
   height: 33em;
-  padding-top: 9%;
+  padding-top: 10%;
 /*  margin-bottom: 2em */  
 /*  background-color: #3bb878; */
 /*  background-image: url("http://i.imgur.com/lXG1upT.jpg?1"); */
@@ -87,8 +82,6 @@ margin-left: 10px;
 
 /* HOME PAGE BOXES */
 
-@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
-
 .box > .icon { text-align: center; position: relative; }
 .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #63B76C; vertical-align: middle; }
 .box > .icon:hover > .image { background: #333; }
@@ -103,6 +96,9 @@ margin-left: 10px;
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
 .box .space { height: 30px; }
 
+.row.spaced {
+padding-bottom: 6em;
+}
 
 /* BRAND PAGE */
 
@@ -290,7 +286,7 @@ letter-spacing: 1.1px;
 padding: 4em 0 3em;
 border-top: 1px solid rgba(255,255,255,0.1);
 border-bottom: 1px solid rgba(0,0,0,0.1);
-background-color: #eaf1f1;
+background-color: #eef2f2;
 }
 
 /* MARKETING PAGE */

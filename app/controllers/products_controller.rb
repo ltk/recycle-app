@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
       :phone => '780-273-8374'
     )
     from_address = EasyPost::Address.create(
-      :company => current_user.first_name + current_user.last_name,
+      :company => current_user.first_name current_user.last_name,
       :street1 => current_user.street1,
       :city => current_user.city,
       :state => current_user.state,

@@ -2,7 +2,7 @@
 <br>
 <div class="row">
  <div class="col-md-offset-2 col-md-8">
-  <h3 class="text-left">Edit User</h3>
+  <h3 class="text-left">My Information</h3>
   </div>
     <br>
     <br>
@@ -17,10 +17,10 @@
           <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
 
           <%= f.email_field :email, class: "default-input", :autofocus => true, placeholder: "Email Address" %>
-
-          <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %>
+<!-- 
+          <%= f.password_field :password, class: "default-input", :autocomplete => "off", placeholder: "New Password" %> -->
     
-          <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %>
+          <%= f.password_field :current_password, class: "default-input", placeholder: "Current Password" %> 
         
       </div> 
 
@@ -38,11 +38,11 @@
         
     </div>
   </div>
- 
+ <!-- 
  <div class="col-md-offset-2 col-md-8">
     <%= f.submit "Update My Information", class: "btn btn-primary btn-block" %>
        <% end %>
-  </div>
+  </div> -->
 
 
   <div class="col-md-offset-2 col-md-8">
