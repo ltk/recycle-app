@@ -1,6 +1,3 @@
-<br>
-<br>
-  
 <div class="row">
   <div class="col-md-offset-2 col-md-4">
     <h3 class="text-left">Create a free account</h3>
@@ -15,14 +12,9 @@
     <%= devise_error_messages!%>
     
     <%= f.text_field :first_name, autofocus: true, class: "default-input", placeholder: "First Name" %>
-  
     <%= f.text_field :last_name, class: "default-input", placeholder: "Last Name" %>
     <%= f.email_field :email, class: "default-input", placeholder: "E-mail Address" %>
     <%= f.password_field :password, class: "default-input", placeholder: "Password" %>
-  </div>
-
-  <div class="col-md-4">
-    <br>
     <%= f.text_field :street1, class: "default-input", placeholder: "Street Address" %>
     <%= f.text_field :city, class: "default-input", placeholder: "City" %>
     <%= f.text_field :state, class: "default-input", placeholder: "State" %>
@@ -33,23 +25,22 @@
                 <br>
                 <br>
     
-    <p>By clicking "Sign up", you agree to our terms of service and <a href="http://www.iubenda.com/privacy-policy/316635" target="_blank">privacy policy</a>.</p>
-  </div>
+<!--     <p>By clicking "Sign up", you agree to our terms of service and <a href="http://www.iubenda.com/privacy-policy/316635" target="_blank">privacy policy</a>.</p>
+ -->  
 </div>
     
         <br>
         <br>
 
 <div class="row">
-  <div class="col-md-offset-4 col-md-4 text-center">
+  <div class="col-md-4 text-center">
     
-    <hr>
   
     <h3>Already have an account?</h3>
     
     <br>
     
     <%= link_to "Log In",  new_user_session_path, class: "btn btn-info btn-lg" %>
-  
+  </div>
   </div>
 </div>

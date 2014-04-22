@@ -59,6 +59,7 @@ class ProductsController < ApplicationController
       :city => current_user.city,
       :state => current_user.state,
       :zip => current_user.zipcode,
+      :email => current_user.email,
       :country => 'USA',
       :phone => '787-456-7890'
     )
