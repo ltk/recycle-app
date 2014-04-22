@@ -57,27 +57,28 @@ margin-left: 10px;
 /* HOME PAGE */
 
 .splash {
-  height: 33em;
-  padding-top: 10%;
+  height: 42em;
+  padding-top: 15%;
 /*  margin-bottom: 2em */  
 /*  background-color: #3bb878; */
 /*  background-image: url("http://i.imgur.com/lXG1upT.jpg?1"); */
 
-  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/congruent_pentagon.png");
+  /* background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/congruent_pentagon.png"); */
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/PLUS-Header-Test-Products-01.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
 }
 
 .splash h1 {
-  font-size: 4.5em;
+  font-size: 3.5em;
   color: black;
 }
 
 .splash p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
-  color: black;
+  color: #7f8c8d;
 }
 
 /* HOME PAGE BOXES */
@@ -167,7 +168,7 @@ margin: 0 auto;
   color: #999;
   font-size: 11px;
   float: left;
-  margin-top: 50px; /*was 50*/
+  margin-top: 20px; /*was 50*/
 }
 #footer a {
   color: #ccc;
