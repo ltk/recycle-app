@@ -34,6 +34,9 @@ class PagesController < ApplicationController
   def manufacturers
   end
 
+  def international
+  end
+
   def reclaim
     @brands = Brand.all
   end
