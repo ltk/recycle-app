@@ -26,5 +26,7 @@ Recycle::Application.routes.draw do
   get "labels" => "pages#labels"
   get "consumers" => "pages#consumers"
   get "manufacturers" => "pages#manufacturers"
+
+  get "ohship" => "pages#ohship"
   
 end
