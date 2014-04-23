@@ -20,6 +20,20 @@ class ApplicationController < ActionController::Base
     redirect_to new_admin_session_path, notice: 'Sorry only administrators can see view the dashboard.' unless current_admin
   end
 
+   # custom 404
+  unless Rails.application.config.consider_all_requests_local
+    rescue_from ActiveRecord::RecordNotFound,
+                ActionController::RoutingError,
+                ActionController::UnknownController,
+                ActionController::UnknownAction,
+                ActionController::MethodNotAllowed do |exception|
+
+      # Put loggers here, if desired.
+
+      redirect_to ohship_path
+    end
+  end
+
   protected
 
   def configure_permitted_parameters
