@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400,700);
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 
 @import 'bootstrap';
 
@@ -15,9 +15,11 @@ footer p { font-size: 14px; }
 
 body {font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 
-p {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+p {font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+h2 {font-weight: 400; font-size: 30px;}
+h3 {font-weight: 400; font-size: 24px;}
+
 
 /* NAV BAR */
 
@@ -58,7 +60,7 @@ margin-left: 10px;
 
 .splash {
   height: 44em;
-  padding-top: 15%;
+  padding-top: 12%;
 /*  margin-bottom: 2em */  
 /*  background-color: #3bb878; */
 /*  background-image: url("http://i.imgur.com/lXG1upT.jpg?1"); */
@@ -68,6 +70,42 @@ margin-left: 10px;
   background-size: cover;
   color: #fff;
   text-align: center;
+}
+
+@media(max-width:991px) {
+    .splash {
+        background-image: url(https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/congruent_pentagon.png) !important;
+    }
+}
+
+.splash .btn {
+    font-size: 30px;
+}
+
+@media(max-width:767px) {
+    .splash .btn {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:991px) {
+    .splash p {
+        font-size: 24px;
+    }
+}
+
+.splash {
+    height: 600px;
+}
+
+.splash p {
+    margin-bottom: 40px;
+}
+
+@media(max-width:991px) {
+    .splash {
+        height: 100%;
+    }
 }
 
 .splash h1 {
@@ -274,8 +312,16 @@ margin: 0 auto;
   
   /* TYPOGRAPHY */ 
 .feature-detail {
-  font-size: 18px;
+  font-size: 19px;
   color: #858585;
+  letter-spacing: .02em;
+}
+
+.feature-detail-about {
+  font-size: 19px;
+  color: #858585;
+  letter-spacing: .02em;
+  font-weight: 300;
 }
 
 .title-features-blue {
@@ -292,9 +338,7 @@ letter-spacing: 1.1px;
 
 .section-tout {
 padding: 4em 0 3em;
-border-top: 1px solid rgba(255,255,255,0.1);
-border-bottom: 1px solid rgba(0,0,0,0.1);
-background-color: #eef2f2;
+background-color: #f6fafd;
 }
 
 /* MARKETING PAGE */
