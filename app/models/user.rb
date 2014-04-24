@@ -6,5 +6,4 @@ class User < ActiveRecord::Base
 
   has_many :submissions
 
-  validates :email, presence: true
 end

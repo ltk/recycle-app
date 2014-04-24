@@ -39,50 +39,57 @@ class ProductsController < ApplicationController
   end
 
   def submit
-    product = Product.find(params[:id])
+    if current_user.country == "United States"
 
-    EasyPost.api_key = ENV['EASYPOST_API_KEY']
+      product = Product.find(params[:id])
 
-    to_address = EasyPost::Address.create(
-      :name => 'PLUSfoam Recycling',
-      :street1 => '844 Production Place',
-      :street2 => '',
-      :city => 'Newport Beach',
-      :state => 'CA',
-      :zip => '92663',
-      :country => 'USA',
-      :phone => '780-273-8374'
-    )
-    from_address = EasyPost::Address.create(
-      :company => current_user.first_name,
-      :street1 => current_user.street1,
-      :city => current_user.city,
-      :state => current_user.state,
-      :zip => current_user.zipcode,
-      :email => current_user.email,
-      :country => 'USA',
-      :phone => '787-456-7890'
-    )
+      EasyPost.api_key = ENV['EASYPOST_API_KEY']
 
-    parcel = EasyPost::Parcel.create(
-      :width => 11.6,
-      :length => 15.2,
-      :height => 3,
-      :weight => 10
-    )
+      to_address = EasyPost::Address.create(
+        :name => 'PLUSfoam Recycling',
+        :street1 => '844 Production Place',
+        :street2 => '',
+        :city => 'Newport Beach',
+        :state => 'CA',
+        :zip => '92663',
+        :country => 'USA',
+        :phone => '949-646-6111'
+      )
+      from_address = EasyPost::Address.create(
+        :company => current_user.first_name + " " + current_user.last_name,
+        :street1 => '933 Main Street',
+        :city => current_user.city,
+        :state => current_user.state,
+        :zip => current_user.zipcode,
+        :email => current_user.email,
+        :country => 'USA',
+        :phone => '949-646-6111'
+      )
 
-    shipment = EasyPost::Shipment.create(
-      :to_address => to_address,
-      :from_address => from_address,
-      :parcel => parcel,
-    )
+      parcel = EasyPost::Parcel.create(
+        :width => 11.6,
+        :length => 15.2,
+        :height => 3,
+        :weight => 10
+      )
 
-    shipment.buy(
-      :rate => shipment.lowest_rate
-    )
+      shipment = EasyPost::Shipment.create(
+        :to_address => to_address,
+        :from_address => from_address,
+        :parcel => parcel,
+        :options => {:address_validation_level => 0}
+      )
 
-    submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id, label: shipment.postage_label.label_url)
-    redirect_to submission_path(submission)
+      shipment.buy(
+        :rate => shipment.lowest_rate(carriers = ['USPS'], services = ['First'])
+      )
+
+      submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id, label: shipment.postage_label.label_url, tracking: shipment.tracking_code)
+      redirect_to submission_path(submission)
+    
+    else
+      redirect_to international_path
+    end
   end
 
   def update

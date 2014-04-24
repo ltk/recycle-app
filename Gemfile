@@ -16,6 +16,7 @@ gem 'aws-sdk', '~> 1.20.0'
 gem 'easypost'
 gem 'cancan'
 gem 'newrelic_rpm'
+gem 'country_select'
 
 group :development, :test do
      gem 'sqlite3'

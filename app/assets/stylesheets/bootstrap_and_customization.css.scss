@@ -56,6 +56,19 @@ margin-left: 10px;
   border:2px solid #999;
 }
 
+select#user_country {
+  height: 49px;
+  padding: 0.8em;
+  border: 2px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+  color: #999;
+  margin-bottom: 15px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
 /* HOME PAGE */
 
 .splash {
@@ -66,7 +79,7 @@ margin-left: 10px;
 /*  background-image: url("http://i.imgur.com/lXG1upT.jpg?1"); */
 
   /* background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/congruent_pentagon.png"); */
-  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/PLUS-Header-Test-Products-01.jpg");
+  background-image: url("https://dl.dropboxusercontent.com/u/3700607/PLUSfoam-14-Site/PLUSfoam-Products-Header-Wide-01.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
