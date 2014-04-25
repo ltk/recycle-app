@@ -88,9 +88,9 @@ class ProductsController < ApplicationController
       redirect_to submission_path(submission)
 
       Analytics.track(
-        user_id: 'current_user.id', 
+        user_id: current_user.id, 
         event: 'Recycled item', 
-        properties: { brand: 'product.brand_id' })
+        properties: { brand: product.brand_id, product: product.name })
     
     else
       redirect_to international_path
