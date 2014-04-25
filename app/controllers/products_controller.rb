@@ -86,6 +86,11 @@ class ProductsController < ApplicationController
 
       submission = product.submissions.create(brand_id: product.brand_id, user_id: current_user.id, label: shipment.postage_label.label_url, tracking: shipment.tracking_code)
       redirect_to submission_path(submission)
+
+      Analytics.track(
+        user_id: 'current_user.id', 
+        event: 'Recycled item', 
+        properties: { brand: 'product.brand_id' })
     
     else
       redirect_to international_path

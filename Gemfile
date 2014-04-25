@@ -17,6 +17,7 @@ gem 'easypost'
 gem 'cancan'
 gem 'newrelic_rpm'
 gem 'country_select'
+gem 'analytics-ruby', '~>1.0'
 
 group :development, :test do
      gem 'sqlite3'

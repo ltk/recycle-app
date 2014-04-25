@@ -1,7 +1,7 @@
 Recycle::Application.routes.draw do
   root "pages#home"
 
-  devise_for :users  
+  devise_for :users, :controllers => { :registrations => 'registrations' }
   devise_for :admins
 
   resources :brands do
