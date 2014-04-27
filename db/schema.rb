@@ -11,6 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# Could use some indexes and foreign key constraints for a lot of these tables.
+
 ActiveRecord::Schema.define(version: 20140423231400) do
 
   create_table "admins", force: true do |t|

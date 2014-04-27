@@ -2,42 +2,32 @@ class PagesController < ApplicationController
   before_filter :authenticate_user!, only: [:reclaim]
   before_filter :authenticate_admin!, only: [:dashboard]
 
-  def home
+  # You could refactor this list of actions to something like this:
+  helper_method :brands, :products
+
+  PAGES = %w(home
+             about
+             faq
+             marketing
+             materials
+             contact
+             labels
+             consumers
+             manufacturers
+             international
+             reclaim)
+
+  PAGES.each do |page|
+    define_method(page){}
   end
 
-  def about
-    @brands = Brand.all
-    @products = Product.all
+  private
+
+  def brands
+    @brands ||= Brand.all
   end
 
-  def faq
-  end
-
-  def marketing
-  end
-
-  def materials
-  end
-
-  def contact
-  end
-
-  def dashboard
-  end
-
-  def labels
-  end
-
-  def consumers
-  end
-
-  def manufacturers
-  end
-
-  def international
-  end
-
-  def reclaim
-    @brands = Brand.all
+  def products
+    @products ||= Product.all
   end
 end

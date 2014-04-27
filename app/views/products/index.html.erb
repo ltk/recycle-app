@@ -16,6 +16,13 @@
 
   <tbody>
     <% @products.each do |product| %>
+    <%# I like to avoid explicit instance variable references whenever possible
+        for reasons outlined in Metz's book: http://www.poodr.com/ (which is
+        a great book).
+
+        Instead you should call helper methods from your controller, even
+        if they are simple instance variable readers. It loosens the coupling
+        between this view and your controller. %>
       <tr>
         <td style="vertical-align:middle;"><%= product.name %></td>
         <td style="vertical-align:middle;"><%= product.brand_id %></td>

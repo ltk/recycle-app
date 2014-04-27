@@ -21,6 +21,8 @@ gem 'analytics-ruby', '~>1.0'
 
 group :development, :test do
      gem 'sqlite3'
+     # I'd always run at least your test env on the same type of database
+     # as production
      gem 'better_errors'
      gem 'binding_of_caller'
 end
